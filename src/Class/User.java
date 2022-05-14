@@ -2,7 +2,7 @@ package Class;
 
 import java.io.Serializable;
 
-public class User implements Serializable {
+public class User implements Serializable, Info {
     private Integer id;
     private String name;
     private String surname;
@@ -61,7 +61,7 @@ public class User implements Serializable {
     }
 
     @Override
-    public String toString() {
+    public String info() {
         return id + ") name='" + name + ", surname='" + surname + ", login='" + login + ", password='" + password;
     }
 }
