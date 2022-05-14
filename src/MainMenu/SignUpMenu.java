@@ -76,8 +76,10 @@ public class SignUpMenu extends Container{
         singButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(!loginField.getText().equals( "" )  && !passwordField.getText().equals( "" ) && !nameField.getText().equals( "" ) && !surnameField.getText().equals( "" ) && passwordField.getText().equals(passwordField2.getText())) {
+                if(!loginField.getText().equals( "" )  && !passwordField.getText().equals( "" ) && !nameField.getText().equals( "" ) &&
+                        !surnameField.getText().equals( "" ) && passwordField.getText().equals(passwordField2.getText())) {
                     User new_user = new User(null, nameField.getText(), surnameField.getText(), loginField.getText(), passwordField.getText());
+
                     PackageData packageData = new PackageData("ADD USER", new_user);
                     Main.connect(packageData);
 
@@ -86,8 +88,6 @@ public class SignUpMenu extends Container{
                     loginField.setText(null);
                     passwordField.setText(null);
                     passwordField2.setText(null);
-
-                    JOptionPane.showInternalMessageDialog(null, "SUCCESSFUL");
                 }else{
                     JOptionPane.showInternalMessageDialog(null, "Fields are null or Passwords are not same");
                 }

@@ -1,26 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2db49892-9fb8-420d-bbc4-19e940cdf10f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Class/PhoneNumbers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Class/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Database/DBManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Database/PackageData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main/MainFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MainMenu/LoginMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MainMenu/MainMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MainMenu/SignUpMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Server/Server.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Server/ServerThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UserMenu/AddMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UserMenu/DeleteMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UserMenu/FindMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UserMenu/ListMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UserMenu/UserMenu.java" afterDir="false" />
+    <list default="true" id="2db49892-9fb8-420d-bbc4-19e940cdf10f" name="Changes" comment="new">
+      <change afterPath="$PROJECT_DIR$/src/mysql-connector-java-8.0.28.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Phonebook.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Phonebook.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Class/PhoneNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class/PhoneNumbers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Database/DBManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database/DBManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Database/PackageData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database/PackageData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainMenu/LoginMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainMenu/LoginMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainMenu/SignUpMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainMenu/SignUpMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/ServerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/ServerThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UserMenu/AddMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserMenu/AddMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UserMenu/DeleteMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserMenu/DeleteMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UserMenu/FindMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserMenu/FindMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UserMenu/UserMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserMenu/UserMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,9 +48,51 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/tannu/IdeaProjects/Music Store NEW 1"
+    "last_opened_file_path": "C:/Users/tannu/IdeaProjects/Phonebook/src/mysql-connector-java-8.0.28.jar",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\tannu\IdeaProjects\Phonebook\src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main.Main" />
+      <module name="Phonebook" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Server.Server" />
+      <module name="Phonebook" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Server" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -63,8 +101,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1652533853305</updated>
-      <workItem from="1652533855264" duration="3830000" />
+      <workItem from="1652533855264" duration="12062000" />
     </task>
+    <task id="LOCAL-00001" summary="new">
+      <created>1652537839342</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1652537839342</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -80,5 +126,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="new" />
+    <option name="LAST_COMMIT_MESSAGE" value="new" />
   </component>
 </project>

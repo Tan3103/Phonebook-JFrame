@@ -1,15 +1,20 @@
 package MainMenu;
 
-import Main.Main;
-
+import Database.DBManager;
+import Database.PackageData;
+import Main.*;
+import Class.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.Statement;
+
+import static Database.DBManager.connection;
 
 public class LoginMenu extends Container {
+    public static User user;
     public LoginMenu(){
         setSize(600,400);
         setLayout(null);
@@ -45,11 +50,27 @@ public class LoginMenu extends Container {
         logInButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                try{
+                try {
+                    DBManager result = new DBManager();
+                    result.connect();
+                    Statement stmt = connection.createStatement();
+                    String sql = "select * from user where login='"  + loginField.getText() + "' and password='" + passwordField.getText() +  "' ";
+                    ResultSet rs = stmt.executeQuery(sql);
 
-                }catch (Exception a){
+                    PackageData pd2 = new PackageData("GET USER", loginField.getText());
+                    Main.connect(pd2);
+
+                    if(rs.next()){
+                        MainFrame.loginMenu.setVisible(false);
+                        MainFrame.userMenu.setVisible(true);
+                        //JOptionPane.showMessageDialog(null, "Hello " + visitor.getName() + "!");
+                    }
+                } catch(Exception a){
                     a.printStackTrace();
                 }
+
+                loginField.setText(null);
+                passwordField.setText(null);
             }
         });
 

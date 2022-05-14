@@ -26,7 +26,7 @@ public class UserMenu extends Container {
         add(deleteButton);
 
         JButton findButton = new JButton("FIND PHONE NUMBER");
-        findButton.setBounds(100, 110, 400, 25);
+        findButton.setBounds(100, 140, 400, 25);
         add(findButton);
 
         JButton backButton = new JButton("Back to menu");

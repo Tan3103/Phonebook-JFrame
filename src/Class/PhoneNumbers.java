@@ -59,4 +59,9 @@ public class PhoneNumbers implements Serializable {
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
+
+    @Override
+    public String toString() {
+        return id + ") name:" + name + ", surname:" + surname + ", type:" + type + ", phoneNumber:" + phoneNumber;
+    }
 }
