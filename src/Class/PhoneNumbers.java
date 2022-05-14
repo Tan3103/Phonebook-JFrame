@@ -62,6 +62,6 @@ public class PhoneNumbers implements Serializable {
 
     @Override
     public String toString() {
-        return id + ") name:" + name + ", surname:" + surname + ", type:" + type + ", phoneNumber:" + phoneNumber;
+        return id + ") Name:" + name + ", Surname:" + surname + ", PhoneNumber:" + phoneNumber + " (" + type + ")";
     }
 }

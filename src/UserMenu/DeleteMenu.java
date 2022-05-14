@@ -16,34 +16,34 @@ public class DeleteMenu extends Container {
         setLayout(null);
 
         JButton listUserButton = new JButton("LIST");
-        listUserButton.setBounds(50, 50, 400, 25);
+        listUserButton.setBounds(100, 50, 400, 30);
         add(listUserButton);
 
         textArea = new JTextArea();
-        textArea.setBounds(50, 80, 400, 200);
+        textArea.setBounds(100, 90, 400, 150);
         add(textArea);
 
-        JButton deleteProductButton = new JButton("Delete");
-        deleteProductButton.setBounds(50, 330, 195, 30);
-        add(deleteProductButton);
-
-        JButton backButton = new JButton("Back to menu");
-        backButton.setBounds(255, 330, 195, 30);
-        add(backButton);
-
         JLabel label = new JLabel("Enter the number of the item you want to delete");
-        label.setBounds(75, 300, 270, 25);
+        label.setBounds(100, 250, 270, 25);
         add(label);
 
         JTextField numberField = new JTextField();
-        numberField.setBounds(350, 300, 80, 25);
+        numberField.setBounds(380, 250, 120, 25);
         add(numberField);
+
+        JButton deleteProductButton = new JButton("Delete");
+        deleteProductButton.setBounds(100, 280, 195, 30);
+        add(deleteProductButton);
+
+        JButton backButton = new JButton("Back to menu");
+        backButton.setBounds(300, 280, 195, 30);
+        add(backButton);
 
         listUserButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 textArea.setText(null);
-                PackageData pd = new PackageData("LIST PHONE", LoginMenu.user);
+                PackageData pd = new PackageData("LIST MY PHONE", LoginMenu.user);
                 Main.connect(pd);
             }
         });

@@ -88,7 +88,7 @@ public class DBManager {
         }
     }
 
-    public ArrayList<PhoneNumbers> getAllPhone(User user){
+    public ArrayList<PhoneNumbers> getMyPhone(User user){
         ArrayList<PhoneNumbers> phoneList = new ArrayList<>();
         try{
             PreparedStatement statement = connection.prepareStatement("SELECT * FROM phone WHERE user_id = '" + user.getId() + "'");
@@ -101,7 +101,7 @@ public class DBManager {
                 String phoneNumber = resultSet.getString("phonenumber");
                 String type = resultSet.getString("type");
 
-                phoneList.add(new PhoneNumbers(id,  name, surname, phoneNumber, type));
+                phoneList.add(new PhoneNumbers(id,  name, surname, type, phoneNumber));
             }
             statement.close();
         }catch (Exception e){
@@ -110,33 +110,32 @@ public class DBManager {
         return phoneList;
     }
 
-    public String findName(String findName, User user){
-        String s = "";
+    public ArrayList<PhoneNumbers> getAllPhone(User user){
+        ArrayList<PhoneNumbers> phoneList = new ArrayList<>();
         try{
-            PreparedStatement statement = connection.prepareStatement("SELECT * FROM phone WHERE user_id ='" + user.getId() + "' AND name = '" + findName + "'");
+            PreparedStatement statement = connection.prepareStatement("SELECT * FROM phone ");
             ResultSet resultSet = statement.executeQuery();
 
-            while(resultSet.next()) {
+            while(resultSet.next()){
                 Integer id = resultSet.getInt("id");
                 String name = resultSet.getString("name");
                 String surname = resultSet.getString("surname");
+                String phoneNumber = resultSet.getString("phonenumber");
                 String type = resultSet.getString("type");
-                String phonenumber = resultSet.getString("phonenumber");
 
-                PhoneNumbers phoneNumbers = new PhoneNumbers(id, name, surname, type, phonenumber);
-                s = phoneNumbers.toString() + '\n';
+                phoneList.add(new PhoneNumbers(id,  name, surname, type, phoneNumber));
             }
             statement.close();
         }catch (Exception e){
             e.printStackTrace();
         }
-        return s;
+        return phoneList;
     }
 
-    public String findPhone(String findPhone, User user){
-        String s = "";
+    public ArrayList<PhoneNumbers> findName(String findName){
+        ArrayList<PhoneNumbers> phoneList = new ArrayList<>();
         try{
-            PreparedStatement statement = connection.prepareStatement("SELECT * FROM phone WHERE user_id ='" + user.getId() + "' AND phonenumber = '" + findPhone + "'");
+            PreparedStatement statement = connection.prepareStatement("SELECT * FROM phone WHERE name = '" + findName + "'");
             ResultSet resultSet = statement.executeQuery();
 
             while(resultSet.next()) {
@@ -144,15 +143,36 @@ public class DBManager {
                 String name = resultSet.getString("name");
                 String surname = resultSet.getString("surname");
                 String type = resultSet.getString("type");
-                String phonenumber = resultSet.getString("phonenumber");
+                String phoneNumber = resultSet.getString("phonenumber");
 
-                PhoneNumbers phoneNumbers = new PhoneNumbers(id, name, surname, type, phonenumber);
-                s += phoneNumbers.toString() + '\n';
+                phoneList.add(new PhoneNumbers(id,  name, surname, type, phoneNumber));
             }
             statement.close();
         }catch (Exception e){
             e.printStackTrace();
         }
-        return s;
+        return phoneList;
+    }
+
+    public ArrayList<PhoneNumbers> findPhone(String findPhone){
+        ArrayList<PhoneNumbers> phoneList = new ArrayList<>();
+        try{
+            PreparedStatement statement = connection.prepareStatement("SELECT * FROM phone WHERE phonenumber = '" + findPhone + "'");
+            ResultSet resultSet = statement.executeQuery();
+
+            while(resultSet.next()) {
+                Integer id = resultSet.getInt("id");
+                String name = resultSet.getString("name");
+                String surname = resultSet.getString("surname");
+                String type = resultSet.getString("type");
+                String phoneNumber = resultSet.getString("phonenumber");
+
+                phoneList.add(new PhoneNumbers(id,  name, surname, type, phoneNumber));
+            }
+            statement.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return phoneList;
     }
 }

@@ -9,9 +9,9 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class ListMenu extends Container {
+public class MyListMenu extends Container {
     public static JTextArea textArea;
-    public ListMenu(){
+    public MyListMenu(){
         setSize(600, 400);
         setLayout(null);
 
@@ -32,7 +32,7 @@ public class ListMenu extends Container {
             public void actionPerformed(ActionEvent e) {
                 textArea.setText(null);
 
-                PackageData pd = new PackageData("LIST PHONE", LoginMenu.user);
+                PackageData pd = new PackageData("LIST MY PHONE", LoginMenu.user);
                 Main.connect(pd);
             }
         });
@@ -40,7 +40,7 @@ public class ListMenu extends Container {
         backButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Main.frame.listMenu.setVisible(false);
+                Main.frame.myListMenu.setVisible(false);
                 Main.frame.userMenu.setVisible(true);
             }
         });

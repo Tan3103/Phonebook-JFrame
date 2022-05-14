@@ -15,47 +15,43 @@ public class FindMenu extends Container {
         setLayout(null);
 
         JLabel nameLabel = new JLabel("NAME:");
-        nameLabel.setBounds(50, 50, 70, 25);
+        nameLabel.setBounds(100, 50, 110, 25);
         add(nameLabel);
 
         JTextField nameField = new JTextField();
-        nameField.setBounds(130, 50, 200, 25);
+        nameField.setBounds(230, 50, 190, 25);
         add(nameField);
 
         JButton find1Button = new JButton("FIND");
-        find1Button.setBounds(330, 50, 70, 25);
+        find1Button.setBounds(430, 50, 70, 25);
         add(find1Button);
 
         JLabel phoneLabel = new JLabel("PHONE NUMBER:");
-        phoneLabel.setBounds(50, 80, 120, 25);
+        phoneLabel.setBounds(100, 80, 110, 25);
         add(phoneLabel);
 
         JTextField phoneField = new JTextField();
-        phoneField.setBounds(130, 80, 200, 25);
+        phoneField.setBounds(230, 80, 190, 25);
         add(phoneField);
 
         JButton find2Button = new JButton("FIND");
-        find2Button.setBounds(330, 80, 70, 25);
+        find2Button.setBounds(430, 80, 70, 25);
         add(find2Button);
 
         textArea = new JTextArea();
-        textArea.setBounds(70, 190, 360, 140);
+        textArea.setBounds(100, 110, 400, 150);
         add(textArea);
 
         JButton backButton = new JButton("Back to menu");
-        backButton.setBounds(255, 370, 175, 25);
+        backButton.setBounds(100, 270, 400, 30);
         add(backButton);
-
-        JButton buyProductButton = new JButton("Buy product");
-        buyProductButton.setBounds(70, 370, 175, 25);
-        add(buyProductButton);
 
         find1Button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 textArea.setText(null);
 
-                PackageData pd = new PackageData("FIND NAME", nameField.getText(), LoginMenu.user);
+                PackageData pd = new PackageData("FIND NAME", nameField.getText());
                 Main.connect(pd);
             }
         });
@@ -65,7 +61,7 @@ public class FindMenu extends Container {
             public void actionPerformed(ActionEvent e) {
                 textArea.setText(null);
 
-                PackageData pd = new PackageData("FIND PHONE", phoneField.getText(), LoginMenu.user);
+                PackageData pd = new PackageData("FIND PHONE", phoneField.getText());
                 Main.connect(pd);
             }
         });

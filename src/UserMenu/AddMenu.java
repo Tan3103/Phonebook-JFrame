@@ -16,46 +16,46 @@ public class AddMenu extends Container {
         setSize(600, 400);
         setLayout(null);
 
-        String[] type = {"Mobile", "Office", "Home"};
+        String[] type = {"mobile", "office", "home"};
 
         JLabel nameLabel = new JLabel("Name:");
-        nameLabel.setBounds(75, 50, 125, 25);
+        nameLabel.setBounds(125, 50, 120, 30);
         add(nameLabel);
 
         JTextField nameField = new JTextField();
-        nameField.setBounds(225, 50, 200, 25);
+        nameField.setBounds(250, 50, 225, 30);
         add(nameField);
 
         JLabel surnameLabel = new JLabel("Surname:");
-        surnameLabel.setBounds(75, 100, 125, 25);
+        surnameLabel.setBounds(125, 100, 120, 30);
         add(surnameLabel);
 
         JTextField surnameField = new JTextField();
-        surnameField.setBounds(225, 100, 200, 25);
+        surnameField.setBounds(250, 100, 225, 30);
         add(surnameField);
 
         JLabel typeLabel = new JLabel("Type:");
-        typeLabel.setBounds(75, 150, 125, 25);
+        typeLabel.setBounds(125, 150, 120, 30);
         add(typeLabel);
 
         JComboBox typeField = new JComboBox(type);
-        typeField.setBounds(225, 150, 200, 25);
+        typeField.setBounds(250, 150, 225, 30);
         add(typeField);
 
         JLabel phoneLabel = new JLabel("Phone Number:");
-        phoneLabel.setBounds(75, 200, 125, 25);
+        phoneLabel.setBounds(125, 200, 120, 30);
         add(phoneLabel);
 
         JTextField phoneField = new JTextField();
-        phoneField.setBounds(225, 200, 200, 25);
+        phoneField.setBounds(250, 200, 225, 30);
         add(phoneField);
 
         JButton addButton = new JButton("Add");
-        addButton.setBounds(75, 300, 170, 30);
+        addButton.setBounds(125, 250, 170, 30);
         add(addButton);
 
         JButton backButton = new JButton("Back to menu");
-        backButton.setBounds(255, 300, 170, 30);
+        backButton.setBounds(305, 250, 170, 30);
         add(backButton);
 
         backButton.addActionListener(new ActionListener() {

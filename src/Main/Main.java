@@ -5,6 +5,8 @@ import Class.*;
 import MainMenu.LoginMenu;
 import UserMenu.DeleteMenu;
 import UserMenu.FindMenu;
+import UserMenu.ListMenu;
+import UserMenu.MyListMenu;
 
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
@@ -30,7 +32,7 @@ public class Main {
                 User user = infoFromServer.getUser();
                 LoginMenu.user = user;
             }
-            else if(pd.getOperationType().equals("LIST PHONE")){
+            else if(pd.getOperationType().equals("LIST MY PHONE")){
                 outputStream.writeObject(pd);
                 PackageData infoFromServer = (PackageData)inputStream.readObject();
                 ArrayList<PhoneNumbers> arrayListFromServer = infoFromServer.getPhoneNumbersArrayList();
@@ -40,20 +42,42 @@ public class Main {
                     s += arrayListFromServer.get(i).toString() + "\n";
                 }
                 DeleteMenu.textArea.append(s);
+                MyListMenu.textArea.append(s);
+            }
+            else if(pd.getOperationType().equals("LIST PHONE")){
+                outputStream.writeObject(pd);
+                PackageData infoFromServer = (PackageData)inputStream.readObject();
+                ArrayList<PhoneNumbers> arrayListFromServer = infoFromServer.getPhoneNumbersArrayList();
+                String s = "";
+
+                for(int i=0; i< arrayListFromServer.size(); i++){
+                    s += arrayListFromServer.get(i).toString() + "\n";
+                }
+                ListMenu.textArea.append(s);
             }
             else if(pd.getOperationType().equals("FIND NAME")){
                 outputStream.writeObject(pd);
                 PackageData infoFromServer = (PackageData)inputStream.readObject();
-                String name = infoFromServer.getLogin();
+                ArrayList<PhoneNumbers> arrayListFromServer = infoFromServer.getPhoneNumbersArrayList();
+                String s = "";
 
-                FindMenu.textArea.append(name);
+                for(int i=0; i< arrayListFromServer.size(); i++){
+                    s += arrayListFromServer.get(i).toString() + "\n";
+                }
+
+                FindMenu.textArea.append(s);
             }
             else if(pd.getOperationType().equals("FIND PHONE")){
                 outputStream.writeObject(pd);
                 PackageData infoFromServer = (PackageData)inputStream.readObject();
-                String find = infoFromServer.getLogin();
+                ArrayList<PhoneNumbers> arrayListFromServer = infoFromServer.getPhoneNumbersArrayList();
+                String s = "";
 
-                FindMenu.textArea.append(find);
+                for(int i=0; i< arrayListFromServer.size(); i++){
+                    s += arrayListFromServer.get(i).toString() + "\n";
+                }
+
+                FindMenu.textArea.append(s);
             }
             inputStream.close();
             outputStream.close();

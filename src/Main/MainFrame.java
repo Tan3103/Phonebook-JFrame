@@ -2,10 +2,7 @@ package Main;
 
 import MainMenu.*;
 import UserMenu.*;
-
 import javax.swing.*;
-
-import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 
 public class MainFrame extends JFrame {
     public static MainMenu mainMenu;
@@ -16,6 +13,7 @@ public class MainFrame extends JFrame {
     public static DeleteMenu deleteMenu;
     public static FindMenu findMenu;
     public static ListMenu listMenu;
+    public static MyListMenu myListMenu;
 
     public MainFrame() {
         setSize(600, 400);
@@ -61,5 +59,10 @@ public class MainFrame extends JFrame {
         listMenu.setLocation(0, 0);
         listMenu.setVisible(false);
         add(listMenu);
+
+        myListMenu = new MyListMenu();
+        myListMenu.setLocation(0, 0);
+        myListMenu.setVisible(false);
+        add(myListMenu);
     }
 }

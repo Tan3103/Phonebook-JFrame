@@ -13,24 +13,28 @@ public class UserMenu extends Container {
         setSize(600, 400);
         setLayout(null);
 
-        JButton listButton = new JButton("LIST PHONE NUMBER");
-        listButton.setBounds(100, 50, 400, 25);
+        JButton listButton = new JButton("List all phone number");
+        listButton.setBounds(100, 50, 400, 30);
         add(listButton);
 
-        JButton addButton = new JButton("ADD PHONE NUMBER");
-        addButton.setBounds(100, 80, 400, 25);
+        JButton myListButton = new JButton("List my phone number");
+        myListButton.setBounds(100, 90, 400, 30);
+        add(myListButton);
+
+        JButton addButton = new JButton("Add phone number");
+        addButton.setBounds(100, 130, 400, 30);
         add(addButton);
 
-        JButton deleteButton = new JButton("DELETE PHONE NUMBER");
-        deleteButton.setBounds(100, 110, 400, 25);
+        JButton deleteButton = new JButton("Delete phone number");
+        deleteButton.setBounds(100, 170, 400, 30);
         add(deleteButton);
 
-        JButton findButton = new JButton("FIND PHONE NUMBER");
-        findButton.setBounds(100, 140, 400, 25);
+        JButton findButton = new JButton("Find phone number");
+        findButton.setBounds(100, 210, 400, 30);
         add(findButton);
 
         JButton backButton = new JButton("Back to menu");
-        backButton.setBounds(100, 275, 400, 25);
+        backButton.setBounds(100, 250, 400, 30);
         add(backButton);
 
         listButton.addActionListener(new ActionListener() {
@@ -38,6 +42,14 @@ public class UserMenu extends Container {
             public void actionPerformed(ActionEvent e) {
                 MainFrame.userMenu.setVisible(false);
                 MainFrame.listMenu.setVisible(true);
+            }
+        });
+
+        myListButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                MainFrame.userMenu.setVisible(false);
+                MainFrame.myListMenu.setVisible(true);
             }
         });
 

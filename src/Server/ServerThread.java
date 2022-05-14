@@ -42,6 +42,13 @@ public class ServerThread extends Thread {
                     outputStream.writeObject(toPercussion);
                     break;
                 }
+                else if(packageData.getOperationType().equals("LIST MY PHONE")){
+                    ArrayList<PhoneNumbers> arrayPhone = manager.getMyPhone(packageData.getUser());
+                    PackageData toKeyboard = new PackageData();
+                    toKeyboard.setPhoneNumbersArrayList(arrayPhone);
+                    outputStream.writeObject(toKeyboard);
+                    break;
+                }
                 else if(packageData.getOperationType().equals("LIST PHONE")){
                     ArrayList<PhoneNumbers> arrayPhone = manager.getAllPhone(packageData.getUser());
                     PackageData toKeyboard = new PackageData();
@@ -55,15 +62,17 @@ public class ServerThread extends Thread {
                     break;
                 }
                 else if(packageData.getOperationType().equals("FIND NAME")){
-                    String findName = manager.findName(packageData.getLogin(), packageData.getUser());
-                    PackageData toPercussion = new PackageData(findName);
-                    outputStream.writeObject(toPercussion);
+                    ArrayList<PhoneNumbers> findName = manager.findName(packageData.getLogin());
+                    PackageData pd = new PackageData();
+                    pd.setPhoneNumbersArrayList(findName);
+                    outputStream.writeObject(pd);
                     break;
                 }
                 else if(packageData.getOperationType().equals("FIND PHONE")){
-                    String findPhone = manager.findPhone(packageData.getOperationType(), packageData.getUser());
-                    PackageData toPercussion = new PackageData(findPhone);
-                    outputStream.writeObject(toPercussion);
+                    ArrayList<PhoneNumbers> findName = manager.findPhone(packageData.getLogin());
+                    PackageData pd = new PackageData();
+                    pd.setPhoneNumbersArrayList(findName);
+                    outputStream.writeObject(pd);
                     break;
                 }
             }

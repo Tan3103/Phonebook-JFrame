@@ -13,14 +13,9 @@ public class MainMenu extends Container {
         setLayout(null);
 
         JLabel welcome = new JLabel("PHONEBOOK");
-        welcome.setBounds(110, 20, 380, 30);
+        welcome.setBounds(225, 50, 380, 30);
         welcome.setFont(new Font("Verdana", Font.BOLD, 20));
         add(welcome);
-
-        JLabel tip = new JLabel("LOGIN OR SIGN UP TO CONTINUE");
-        tip.setBounds(150, 40, 300, 30);
-        tip.setFont(new Font("Verdana", Font.BOLD, 14));
-        add(tip);
 
         JButton logInButton = new JButton("Log in");
         logInButton.setFont(new Font("Verdana", Font.BOLD , 12));
