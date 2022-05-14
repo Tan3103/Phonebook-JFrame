@@ -66,12 +66,12 @@ public class SignUpMenu extends Container{
 
         JButton singButton = new JButton("Sing up");
         singButton.setFont(new Font("Verdana", Font.BOLD, 12));
-        singButton.setBounds(100, 305, 140, 40);
+        singButton.setBounds(100, 290, 140, 40);
         add(singButton);
 
         JButton backButton = new JButton("Back to menu");
         backButton.setFont(new Font("Verdana", Font.BOLD, 12));
-        backButton.setBounds(250, 305, 150, 40);
+        backButton.setBounds(250, 290, 150, 40);
         add(backButton);
 
         Checker checker = new Checker();
