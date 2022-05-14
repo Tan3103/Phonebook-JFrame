@@ -1,5 +1,6 @@
 package MainMenu;
 
+import Checker.Checker;
 import Database.PackageData;
 import Main.Main;
 import Class.*;
@@ -45,7 +46,7 @@ public class SignUpMenu extends Container{
         passwordLabel.setBounds(100, 180, 100, 30);
         add(passwordLabel);
 
-        JLabel tip = new JLabel("(password must have digit, one lowercase and one capital letter)");
+        JLabel tip = new JLabel("(password must have min one digit, one lowercase and one capital letter)");
         tip.setFont(new Font("Serif", Font.BOLD , 12));
         tip.setBounds(100, 255, 400, 30);
         add(tip);
@@ -73,10 +74,12 @@ public class SignUpMenu extends Container{
         backButton.setBounds(250, 305, 150, 40);
         add(backButton);
 
+        Checker checker = new Checker();
+
         singButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(!loginField.getText().equals( "" )  && !passwordField.getText().equals( "" ) && !nameField.getText().equals( "" ) &&
+                if(checker.checkerPassword(passwordField.getText()) && !loginField.getText().equals( "" )  && !passwordField.getText().equals( "" ) && !nameField.getText().equals( "" ) &&
                         !surnameField.getText().equals( "" ) && passwordField.getText().equals(passwordField2.getText())) {
                     User new_user = new User(null, nameField.getText(), surnameField.getText(), loginField.getText(), passwordField.getText());
 
