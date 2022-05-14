@@ -18,7 +18,7 @@ public class Main {
 
     public static void connect(PackageData pd){
         try{
-            Socket socket = new Socket("127.0.0.1", 4512);
+            Socket socket = new Socket("127.0.0.1", 8541);
             ObjectOutputStream outputStream = new ObjectOutputStream(socket.getOutputStream());
             ObjectInputStream inputStream = new ObjectInputStream(socket.getInputStream());
 
@@ -39,7 +39,7 @@ public class Main {
                 String s = "";
 
                 for(int i=0; i< arrayListFromServer.size(); i++){
-                    s += arrayListFromServer.get(i).toString() + "\n";
+                    s += arrayListFromServer.get(i).info() + "\n";
                 }
                 DeleteMenu.textArea.append(s);
                 MyListMenu.textArea.append(s);
@@ -51,7 +51,7 @@ public class Main {
                 String s = "";
 
                 for(int i=0; i< arrayListFromServer.size(); i++){
-                    s += arrayListFromServer.get(i).toString() + "\n";
+                    s += arrayListFromServer.get(i).info() + "\n";
                 }
                 ListMenu.textArea.append(s);
             }
@@ -62,7 +62,7 @@ public class Main {
                 String s = "";
 
                 for(int i=0; i< arrayListFromServer.size(); i++){
-                    s += arrayListFromServer.get(i).toString() + "\n";
+                    s += arrayListFromServer.get(i).info() + "\n";
                 }
 
                 FindMenu.textArea.append(s);
@@ -74,7 +74,7 @@ public class Main {
                 String s = "";
 
                 for(int i=0; i< arrayListFromServer.size(); i++){
-                    s += arrayListFromServer.get(i).toString() + "\n";
+                    s += arrayListFromServer.get(i).info() + "\n";
                 }
 
                 FindMenu.textArea.append(s);

@@ -2,7 +2,7 @@ package Class;
 
 import java.io.Serializable;
 
-public class PhoneNumbers implements Serializable {
+public class PhoneNumbers implements Serializable, Info {
     private Integer id;
     private String name;
     private String surname;
@@ -61,7 +61,7 @@ public class PhoneNumbers implements Serializable {
     }
 
     @Override
-    public String toString() {
+    public String info() {
         return id + ") Name:" + name + ", Surname:" + surname + ", PhoneNumber:" + phoneNumber + " (" + type + ")";
     }
 }
